@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use base 'DBIx::Class';
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 #namespace pollution. sadface.
 __PACKAGE__->mk_classdata( _m2m_metadata => {} );
@@ -64,6 +64,14 @@ When you want to introspect this data
    #  $metadata->{remove_method} 'remove_from_roles'
 
 B<Note:> The component needs to be loaded I<before> Core.
+
+=head1 COMPATIBILITY NOTICE
+
+This module is fairly esoteric and, unless you are dynamically creating
+something out of of a DBIC Schema, is probably the wrong solution for
+whatever it is you are trying to do. Please be advised that compatibility
+is not guaranteed for DBIx::Class 0.09000+. We will try to mantain all
+compatibility, but internal changes might make it impossible.
 
 =head1 DESCRIPTION
 
